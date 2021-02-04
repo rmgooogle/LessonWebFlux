@@ -18,7 +18,7 @@ public class GreetingRouter {
 
         RequestPredicate route =  RequestPredicates
                 .GET("/hello")
-                .and(RequestPredicates.accept(MediaType.TEXT_PLAIN));
+                .and(RequestPredicates.accept(MediaType.APPLICATION_JSON));
 
         return RouterFunctions
                 .route(route, greetingHandler::hello)
